@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--@head-->
+    <title>Watchlist Subscription — Weekly AI Stock Reports (Coming Soon) | DeepStockReport</title>
+    <meta name="description" content="Coming soon: a DeepStockReport watchlist subscription with {{watchlist_free_reports_per_week}} AI research reports every week on the stocks you follow. Join the free interest list." />
+    <link rel="canonical" href="https://www.deepstockreport.com/watchlist" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DeepStockReport watchlist subscription — coming soon" />
+    <meta property="og:description" content="{{watchlist_free_reports_per_week}} AI research reports a week on the stocks you follow." />
+    <meta property="og:url" content="https://www.deepstockreport.com/watchlist" />
+  </head>
+  <body>
+    <!--@header-->
+    <main id="top">
+      <div class="wrap">
+        <header class="page-head">
+          <p class="kicker">Watchlist subscription &middot; coming soon</p>
+          <h1>Fresh reports on the stocks you follow, every week</h1>
+          <p>Paid watchlist subscribers will receive <strong>{{watchlist_free_reports_per_week}} reports every week</strong>
+            included in their plan, run on the tickers from their own watchlist as new data arrives — the same
+            five-stage desk process as every DeepStockReport report.</p>
+        </header>
+
+        <section>
+          <div class="request-grid">
+            <div class="request-copy prose">
+              <h2>What we&rsquo;re planning</h2>
+              <ul>
+                <li><strong>{{watchlist_free_reports_per_week}} reports per week</strong> included for paid subscribers</li>
+                <li>Pick the tickers from your watchlist each week</li>
+                <li>Updated ratings, targets and triggers as the data changes</li>
+              </ul>
+              <p>Pricing and full details are coming soon. Joining the interest list is free and doesn&rsquo;t commit
+                you to anything — we&rsquo;ll email you once when subscriptions open.</p>
+            </div>
+            <form class="req" data-api="/api/watchlist" novalidate>
+              <div class="field">
+                <label for="wlEmail">Email *</label>
+                <input id="wlEmail" type="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+              </div>
+              <div class="hp" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off" /></label></div>
+              <button class="btn" type="submit">Join the interest list — free</button>
+              <p class="form-msg" role="status"></p>
+              <p class="foot-small">We only use your email to tell you about the watchlist subscription.</p>
+            </form>
+          </div>
+        </section>
+
+        <section>
+          <p class="catalog-note">Don&rsquo;t want to wait? <a href="/reports#catalog">Buy a ready-made report</a> or
+            <a href="/reports#request">order a custom report</a> today.</p>
+        </section>
+      </div>
+    </main>
+    <!--@footer-->
+  </body>
+</html>

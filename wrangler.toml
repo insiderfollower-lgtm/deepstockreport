@@ -1,0 +1,14 @@
+# Cloudflare Pages project config (used by Git deploys and `npm run dev`).
+name = "deepstockreport"
+pages_build_output_dir = "public"
+compatibility_date = "2026-10-01"
+
+# Private bucket holding the paid catalog PDFs.
+[[r2_buckets]]
+binding = "REPORTS"
+bucket_name = "deepstockreport-reports"
+
+[vars]
+SITE_URL = "https://www.deepstockreport.com"
+EMAIL_FROM = "DeepStockReport <reports@deepstockreport.com>"
+ADMIN_EMAIL = "deepstockreport@gmail.com"

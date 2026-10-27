@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--@head-->
+    <title>Affiliate Program — Earn {{affiliate_commission_percent}}% on Every Order | DeepStockReport</title>
+    <meta name="description" content="Join the DeepStockReport affiliate program: earn {{affiliate_commission_percent}}% of every paid order you refer — catalog and custom reports — with a {{affiliate_cookie_days}}-day cookie and a private, real-time earnings dashboard." />
+    <link rel="canonical" href="https://www.deepstockreport.com/affiliates" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DeepStockReport affiliate program — {{affiliate_commission_percent}}% commission" />
+    <meta property="og:description" content="Refer readers to AI stock research reports and earn {{affiliate_commission_percent}}% of every order." />
+    <meta property="og:url" content="https://www.deepstockreport.com/affiliates" />
+  </head>
+  <body>
+    <!--@header-->
+    <main id="top">
+      <div class="wrap">
+        <header class="page-head">
+          <p class="kicker">Affiliate program</p>
+          <h1>Earn {{affiliate_commission_percent}}% on every report you refer</h1>
+          <p>Share DeepStockReport with your readers, followers or clients. When someone buys through your link — a
+            ready-made catalog report or a custom report — you earn {{affiliate_commission_percent}}% of what they pay.</p>
+        </header>
+
+        <div class="hero-stats">
+          <div><p class="num">{{affiliate_commission_percent}}%</p><p class="lbl">Of every paid order, catalog and custom</p></div>
+          <div><p class="num">{{affiliate_cookie_days}} days</p><p class="lbl">Your link is remembered this long</p></div>
+          <div><p class="num">Real time</p><p class="lbl">Private dashboard with every referred order</p></div>
+          <div><p class="num">Free</p><p class="lbl">To join, no minimum traffic</p></div>
+        </div>
+
+        <section>
+          <div class="cards-3">
+            <div class="card"><p class="sample-label">1 · Sign up</p><h3>Get your link</h3>
+              <p>Pick a referral code. Your link works on any page — just add <span class="mono">?ref=yourcode</span>.</p></div>
+            <div class="card"><p class="sample-label">2 · Share</p><h3>Readers buy</h3>
+              <p>Anyone who clicks your link and buys within {{affiliate_cookie_days}} days is credited to you (last link clicked wins).</p></div>
+            <div class="card"><p class="sample-label">3 · Get paid</p><h3>Track &amp; collect</h3>
+              <p>Commissions show up in your dashboard as soon as Stripe confirms payment, and become payable after {{affiliate_hold_days}} days.</p></div>
+          </div>
+        </section>
+
+        <section id="verify" class="prose">
+          <h2>How you can verify what you&rsquo;ve earned</h2>
+          <p>Every affiliate gets a private dashboard link. It shows your link clicks and one row per referred order:
+            the date, the amount the customer actually paid (after any bundle discount), your rate, your commission and
+            its status. Rows are created automatically from Stripe&rsquo;s payment confirmation — nobody types them in.</p>
+          <ul>
+            <li><strong>Pending</strong> — inside the {{affiliate_hold_days}}-day refund window</li>
+            <li><strong>Payable</strong> — past the window, waiting for the next payout</li>
+            <li><strong>Paid</strong> — sent to you, with the date and PayPal transaction reference</li>
+            <li><strong>Refunded</strong> — the customer was refunded, so no commission is due</li>
+          </ul>
+          <p>Payouts are sent by PayPal (or another method we agree on) once a month for everything marked Payable.</p>
+
+          <h2>Program rules</h2>
+          <ul>
+            <li>No commission on your own purchases.</li>
+            <li>No spam, no bidding on &ldquo;DeepStockReport&rdquo; in paid search, no fake reviews or coupon sites.</li>
+            <li>Don&rsquo;t present reports as personalized financial advice or promise returns — they are research only.</li>
+            <li>Disclose that you earn a commission, as required where you publish.</li>
+            <li>We may withhold commissions for fraud or rule violations and may change the program with notice.</li>
+          </ul>
+        </section>
+
+        <section id="join" aria-labelledby="join-h">
+          <div class="request-grid">
+            <div class="request-copy">
+              <p class="kicker">Join</p>
+              <h2 id="join-h">Become an affiliate</h2>
+              <p>Signing up takes a minute. You&rsquo;ll get your referral link and dashboard right away, and a copy by email.
+                Already signed up? Enter the same email and we&rsquo;ll re-send your dashboard link.</p>
+            </div>
+            <form class="req" data-api="/api/affiliate-signup" novalidate>
+              <div class="form-row">
+                <div class="field"><label for="afName">Name *</label><input id="afName" name="name" required maxlength="80" autocomplete="name" /></div>
+                <div class="field"><label for="afEmail">Email *</label><input id="afEmail" type="email" name="email" required autocomplete="email" /></div>
+              </div>
+              <div class="form-row">
+                <div class="field"><label for="afPaypal">PayPal email for payouts</label><input id="afPaypal" type="email" name="payout_email" placeholder="if different" /></div>
+                <div class="field"><label for="afCode">Preferred code</label><input id="afCode" name="code" maxlength="30" placeholder="e.g. yourname" autocomplete="off" /></div>
+              </div>
+              <div class="field"><label for="afSite">Where will you share? (site, channel, newsletter)</label><input id="afSite" name="website" maxlength="200" /></div>
+              <div class="hp" aria-hidden="true"><label>Company <input name="company" tabindex="-1" autocomplete="off" /></label></div>
+              <div class="field"><label class="check"><input type="checkbox" name="agree" /> I agree to the program rules above.</label></div>
+              <button class="btn" type="submit">Get my affiliate link</button>
+              <p class="form-msg" role="status"></p>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!--@footer-->
+  </body>
+</html>

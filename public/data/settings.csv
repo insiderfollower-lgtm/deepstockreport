@@ -1,0 +1,16 @@
+setting,value,description
+price_shallow,29,Custom report price in USD - Shallow research depth
+price_medium,39,Custom report price in USD - Medium research depth
+price_deep,49,Custom report price in USD - Deep research depth
+catalog_daily_drop,1,Catalog price drops by this many USD each day after the report date
+catalog_min_price,3,Catalog price never goes below this (USD)
+bundle_2_percent,10,Discount % for 2 paid reports in one order
+bundle_3_percent,20,Discount % for 3-4 paid reports in one order
+bundle_5_percent,30,Discount % for 5 or more paid reports in one order
+watchlist_free_reports_per_week,3,Planned free reports per week for paid watchlist subscribers (shown on the Watchlist page)
+affiliate_commission_percent,30,Affiliate commission as % of the amount the customer actually paid
+affiliate_cookie_days,180,How long a referral link click is remembered
+affiliate_hold_days,30,Days a commission stays pending (refund window) before it becomes payable
+download_link_days,30,Days a catalog download link stays valid after purchase
+download_limit,10,Max downloads per purchased report link
+contact_email,deepstockreport@gmail.com,Shown on the site and used as reply-to on emails

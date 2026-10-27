@@ -1,0 +1,12 @@
+{
+  "name": "deepstockreport",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler pages dev",
+    "test": "node --test tests/lib.test.js"
+  },
+  "devDependencies": {
+    "wrangler": "^4.40.0"
+  }
+}

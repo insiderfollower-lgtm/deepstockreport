@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /download/
+Disallow: /thank-you
+Disallow: /affiliates/dashboard/
+
+Sitemap: https://www.deepstockreport.com/sitemap.xml
