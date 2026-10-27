@@ -1,5 +1,5 @@
 ticker,name,date,pages,level,price,file,notes
-NVDA,NVIDIA Corporation,2026-10-19,70,Deep,15,NVDA_20261019.pdf,
+NVDA,NVIDIA Corporation,2026-10-19,70,Medium,15,NVDA_20261019.pdf,
 AMZN,"Amazon.com, Inc.",2026-10-20,28,Deep,15,AMZN_20261020.pdf,
-AMAT,"Applied Materials, Inc.",2026-10-20,44,Deep,15,AMAT_20261020.pdf,
+AMAT,"Applied Materials, Inc.",2026-10-20,44,Shallow,15,AMAT_20261020.pdf,
 META,"Meta Platforms, Inc.",2026-10-21,40,Deep,15,META_20261021.pdf,
