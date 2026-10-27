@@ -6,7 +6,7 @@ compatibility_date = "2026-10-01"
 # Private bucket holding the paid catalog PDFs.
 [[r2_buckets]]
 binding = "REPORTS"
-bucket_name = "deepstockreport-reports"
+bucket_name = "deepstockreport-r2-upload"
 
 [vars]
 SITE_URL = "https://www.deepstockreport.com"

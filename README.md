@@ -22,7 +22,7 @@ Plain HTML/CSS/JS, no build step. Server logic is in Pages Functions (`functions
 ## Everyday tasks
 
 ### Add a ready-made report to the catalog
-1. Upload the PDF to the R2 bucket **deepstockreport-reports**: Cloudflare dashboard → R2 → bucket → *Upload*.
+1. Upload the PDF to the R2 bucket **deepstockreport-r2-upload**: Cloudflare dashboard → R2 → bucket → *Upload*.
 2. Add one line to `public/data/catalog.csv`, then commit and push. Cloudflare redeploys in about a minute.
 
 ```
@@ -76,7 +76,7 @@ Pages projects created with "Upload assets" can't be connected to Git afterwards
    "Redirect from root to WWW" template.
 
 ### 3. R2 bucket (free tier: 10 GB storage, no egress fees)
-1. R2 → *Create bucket* → name it `deepstockreport-reports`. Keep public access **off**.
+1. R2 → *Create bucket* → name it `deepstockreport-r2-upload`. Keep public access **off**.
    R2 may ask you to add a payment method once, even on the free tier.
 2. Upload the four existing catalog PDFs from `../deepstockreport-r2-upload/`.
 3. The `REPORTS` binding is declared in `wrangler.toml`, which Pages reads on every deploy, so there's nothing to set up in the dashboard.
@@ -125,7 +125,7 @@ npm run dev                      # http://localhost:8788
 npm test                         # pricing / CSV / webhook-signature unit tests
 ```
 To test downloads locally, put a PDF into the local R2 simulator:
-`npx wrangler r2 object put deepstockreport-reports/NVDA_20261019.pdf --file ../deepstockreport-r2-upload/NVDA_20261019.pdf --local`
+`npx wrangler r2 object put deepstockreport-r2-upload/NVDA_20261019.pdf --file ../deepstockreport-r2-upload/NVDA_20261019.pdf --local`
 
 ## How the pieces fit
 - **Prices are computed only on the server** (`lib/data.js`), from the two CSV files. The cart asks `/api/quote`, and checkout
