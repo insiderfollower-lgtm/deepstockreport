@@ -67,6 +67,6 @@ export async function onRequestPost({ request, env }) {
     return json({ url: session.url });
   } catch (err) {
     console.log("checkout failed:", err.message);
-    return json({ error: String(err.message || err) }, 502);
+    return json({ error: String(err.message || err) }, 500);
   }
 }

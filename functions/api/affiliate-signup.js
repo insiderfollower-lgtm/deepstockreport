@@ -8,7 +8,7 @@ import { supabase, sendEmail, randomToken, isEmail, siteOrigin } from "../../lib
 export async function onRequestPost({ request, env }) {
   let body;
   try { body = await request.json(); } catch { return json({ error: "Invalid request body." }, 400); }
-  if (body.company) return json({ ok: true }); // honeypot
+  if (body.dsr_hp) return json({ ok: true }); // honeypot (hidden field only bots fill in)
 
   const name = String(body.name || "").trim().slice(0, 80);
   const email = String(body.email || "").trim().toLowerCase();
@@ -52,7 +52,7 @@ export async function onRequestPost({ request, env }) {
     } catch (err) {
       if (err.code !== "23505") { // anything except a unique-key clash
         console.log("affiliate signup failed:", err.message);
-        return json({ error: "Something went wrong — please try again later." }, 502);
+        return json({ error: "Something went wrong — please try again later." }, 500);
       }
       if (attempt === 0 && wanted) {
         return json({ error: `The code "${wanted}" is taken — please choose another.` }, 409);
